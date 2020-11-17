@@ -50,10 +50,22 @@ function second(obj)
 function edu(educ)
 {
     var child2=document.querySelector(".child2");
-    var tr=document.createElement("tr");
-    tr.textContent=tr.educ;
-    console.log(tr)
-    child2.appendChild(tr);
+    var table=document.createElement("table");
+    for(var i=0;i<3;i++)
+    {
+   var tr = document.createElement("tr");
+   var td0=document.createElement("td");
+   var td1 =document.createElement("td");
+   var td2 =document.createElement("td");
+   td0.textContent=educ[i].institute;
+   td1.textContent=educ[i].degree;
+   td2.textContent=educ[i].POY;
+   table.appendChild(tr);
+   tr.appendChild(td0);
+   tr.appendChild(td1);
+   tr.appendChild(td2);
+   child2.appendChild(tr);
+    }
 }
 function skill(s)
 {
